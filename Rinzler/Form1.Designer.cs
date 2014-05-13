@@ -51,11 +51,20 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.bttn_rem_vba = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.bttn_perform_all = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.projectWebPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bttnUnhide
@@ -68,9 +77,9 @@
             this.bttnUnhide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnUnhide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnUnhide.ForeColor = System.Drawing.Color.White;
-            this.bttnUnhide.Location = new System.Drawing.Point(69, 105);
+            this.bttnUnhide.Location = new System.Drawing.Point(6, 65);
             this.bttnUnhide.Name = "bttnUnhide";
-            this.bttnUnhide.Size = new System.Drawing.Size(235, 38);
+            this.bttnUnhide.Size = new System.Drawing.Size(297, 38);
             this.bttnUnhide.TabIndex = 1;
             this.bttnUnhide.Text = "&Unhide All Files and Folder";
             this.toolTip1.SetToolTip(this.bttnUnhide, "Unhides all folders and files in the selected drive.");
@@ -84,8 +93,9 @@
             this.DriveListCombo.FormattingEnabled = true;
             this.DriveListCombo.Location = new System.Drawing.Point(69, 62);
             this.DriveListCombo.Name = "DriveListCombo";
-            this.DriveListCombo.Size = new System.Drawing.Size(235, 25);
+            this.DriveListCombo.Size = new System.Drawing.Size(162, 25);
             this.DriveListCombo.TabIndex = 0;
+            this.DriveListCombo.SelectedIndexChanged += new System.EventHandler(this.DriveListCombo_SelectedIndexChanged_1);
             this.DriveListCombo.Click += new System.EventHandler(this.DriveListCombo_SelectedIndexChanged);
             // 
             // textBox1
@@ -106,9 +116,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(69, 147);
+            this.button1.Location = new System.Drawing.Point(6, 106);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(235, 38);
+            this.button1.Size = new System.Drawing.Size(297, 38);
             this.button1.TabIndex = 2;
             this.button1.Text = "Delete All &Shortcut";
             this.button1.UseVisualStyleBackColor = false;
@@ -124,11 +134,11 @@
             this.bttn_auto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttn_auto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttn_auto.ForeColor = System.Drawing.Color.White;
-            this.bttn_auto.Location = new System.Drawing.Point(69, 188);
+            this.bttn_auto.Location = new System.Drawing.Point(6, 148);
             this.bttn_auto.Name = "bttn_auto";
-            this.bttn_auto.Size = new System.Drawing.Size(235, 38);
+            this.bttn_auto.Size = new System.Drawing.Size(297, 38);
             this.bttn_auto.TabIndex = 3;
-            this.bttn_auto.Text = "Delete &Autorun.inf";
+            this.bttn_auto.Text = "Delete all &Autorun.inf";
             this.bttn_auto.UseVisualStyleBackColor = false;
             this.bttn_auto.Click += new System.EventHandler(this.bttn_auto_Click);
             // 
@@ -142,9 +152,9 @@
             this.bttnDelAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnDelAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnDelAll.ForeColor = System.Drawing.Color.White;
-            this.bttnDelAll.Location = new System.Drawing.Point(333, 167);
+            this.bttnDelAll.Location = new System.Drawing.Point(328, 172);
             this.bttnDelAll.Name = "bttnDelAll";
-            this.bttnDelAll.Size = new System.Drawing.Size(244, 59);
+            this.bttnDelAll.Size = new System.Drawing.Size(252, 58);
             this.bttnDelAll.TabIndex = 5;
             this.bttnDelAll.Text = "&Delete All Files in Drive";
             this.bttnDelAll.UseVisualStyleBackColor = false;
@@ -189,6 +199,7 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem1,
             this.donateToolStripMenuItem,
+            this.projectWebPageToolStripMenuItem,
             this.howToToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(49, 23);
@@ -211,8 +222,8 @@
             // howToToolStripMenuItem
             // 
             this.howToToolStripMenuItem.Name = "howToToolStripMenuItem";
-            this.howToToolStripMenuItem.Size = new System.Drawing.Size(250, 24);
-            this.howToToolStripMenuItem.Text = "Go to Software Project Page";
+            this.howToToolStripMenuItem.Size = new System.Drawing.Size(224, 24);
+            this.howToToolStripMenuItem.Text = "Software Project Page";
             this.howToToolStripMenuItem.Click += new System.EventHandler(this.howToToolStripMenuItem_Click);
             // 
             // pictureBox1
@@ -236,9 +247,9 @@
             this.bttn_explorer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttn_explorer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttn_explorer.ForeColor = System.Drawing.Color.White;
-            this.bttn_explorer.Location = new System.Drawing.Point(333, 105);
+            this.bttn_explorer.Location = new System.Drawing.Point(328, 115);
             this.bttn_explorer.Name = "bttn_explorer";
-            this.bttn_explorer.Size = new System.Drawing.Size(244, 58);
+            this.bttn_explorer.Size = new System.Drawing.Size(252, 54);
             this.bttn_explorer.TabIndex = 4;
             this.bttn_explorer.Text = "&Open Drive in Explorer";
             this.bttn_explorer.UseVisualStyleBackColor = false;
@@ -286,12 +297,148 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Select a Drive";
             // 
+            // bttn_rem_vba
+            // 
+            this.bttn_rem_vba.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bttn_rem_vba.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.bttn_rem_vba.FlatAppearance.BorderSize = 0;
+            this.bttn_rem_vba.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.bttn_rem_vba.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
+            this.bttn_rem_vba.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttn_rem_vba.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttn_rem_vba.ForeColor = System.Drawing.Color.White;
+            this.bttn_rem_vba.Location = new System.Drawing.Point(6, 190);
+            this.bttn_rem_vba.Name = "bttn_rem_vba";
+            this.bttn_rem_vba.Size = new System.Drawing.Size(297, 38);
+            this.bttn_rem_vba.TabIndex = 15;
+            this.bttn_rem_vba.Text = "Delete  all &VBA Scripts";
+            this.bttn_rem_vba.UseVisualStyleBackColor = false;
+            this.bttn_rem_vba.Click += new System.EventHandler(this.bttn_rem_vba_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(6, 232);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(297, 38);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Delete  all &ini files";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // bttn_perform_all
+            // 
+            this.bttn_perform_all.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bttn_perform_all.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.bttn_perform_all.FlatAppearance.BorderSize = 0;
+            this.bttn_perform_all.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.bttn_perform_all.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
+            this.bttn_perform_all.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttn_perform_all.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttn_perform_all.ForeColor = System.Drawing.Color.White;
+            this.bttn_perform_all.Location = new System.Drawing.Point(0, -1);
+            this.bttn_perform_all.Name = "bttn_perform_all";
+            this.bttn_perform_all.Size = new System.Drawing.Size(309, 49);
+            this.bttn_perform_all.TabIndex = 17;
+            this.bttn_perform_all.Text = "Perform All Ac&tions";
+            this.toolTip1.SetToolTip(this.bttn_perform_all, "Perform all the left actions at once");
+            this.bttn_perform_all.UseVisualStyleBackColor = false;
+            this.bttn_perform_all.Click += new System.EventHandler(this.bttn_perform_all_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.groupBox1.Controls.Add(this.bttnUnhide);
+            this.groupBox1.Controls.Add(this.bttn_perform_all);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.bttn_auto);
+            this.groupBox1.Controls.Add(this.bttn_rem_vba);
+            this.groupBox1.Location = new System.Drawing.Point(13, 115);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(309, 279);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "+";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(328, 310);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(252, 82);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "E&xit";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(237, 63);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(84, 25);
+            this.button4.TabIndex = 20;
+            this.button4.Text = "Refresh";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(328, 233);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(252, 68);
+            this.button5.TabIndex = 21;
+            this.button5.Text = "Disable Auto&run Completely";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // projectWebPageToolStripMenuItem
+            // 
+            this.projectWebPageToolStripMenuItem.Name = "projectWebPageToolStripMenuItem";
+            this.projectWebPageToolStripMenuItem.Size = new System.Drawing.Size(224, 24);
+            this.projectWebPageToolStripMenuItem.Text = "Project Web Page";
+            this.projectWebPageToolStripMenuItem.Click += new System.EventHandler(this.projectWebPageToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(598, 250);
+            this.ClientSize = new System.Drawing.Size(598, 403);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -299,11 +446,8 @@
             this.Controls.Add(this.bttn_explorer);
             this.Controls.Add(this.bttnDelAll);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.bttn_auto);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.DriveListCombo);
-            this.Controls.Add(this.bttnUnhide);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -311,7 +455,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Text = "Rinzler v1.0";
+            this.Text = "Rinzler v1.1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -319,6 +463,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,6 +492,14 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.ComboBox DriveListCombo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button bttn_rem_vba;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bttn_perform_all;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ToolStripMenuItem projectWebPageToolStripMenuItem;
     }
 }
 
