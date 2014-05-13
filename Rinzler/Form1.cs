@@ -260,6 +260,12 @@ namespace Rinzler
 
         private void button5_Click(object sender, EventArgs e)
         {
+            //creating the registry file
+            FileStream fs1 = new FileStream("dg.reg", FileMode.OpenOrCreate, FileAccess.Write);
+            StreamWriter writer = new StreamWriter(fs1);
+            writer.Write("Windows Registry Editor Version 5.00\r\n;Created by Sayem Chaklader\r\n[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\r\n\"NoDriveTypeAutoRun\"=dword:000000ff");
+            writer.Close();
+
             string unhideDrive ="da.reg";
 
             textBox1.Text = unhideDrive;
