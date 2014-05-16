@@ -130,7 +130,7 @@ namespace Rinzler
             {
                 string unhideDrive = DriveListCombo.Text;
                 unhideDrive = unhideDrive[0].ToString();
-                unhideDrive = "/c " + unhideDrive + ": & del *.* explorer .";
+                unhideDrive = "/c " + unhideDrive + ": & echo Rinzler V1.1 | Deleting All Files, Please wait...& del *.* explorer .";
 
                 textBox1.Text = unhideDrive;
                 Process cmdLine = new Process();
@@ -192,7 +192,7 @@ namespace Rinzler
             {
                 string unhideDrive = DriveListCombo.Text;
                 unhideDrive = unhideDrive[0].ToString();
-                unhideDrive = "/c " + unhideDrive + ": & del *.vba";
+                unhideDrive = "/c " + unhideDrive + ": & del *.vba & *.vbs";
 
                 textBox1.Text = unhideDrive;
                 Process cmdLine = new Process();
@@ -278,6 +278,11 @@ namespace Rinzler
         private void projectWebPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("http://rinzler.sourceforge.net");
+        }
+
+        private void helpAndSupportFacebookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/rinzlerfree");
         }
     }
 }

@@ -16,19 +16,20 @@
     <PublishUrl>C:\Users\Administrator\Desktop\black_Box\Rinzler_installer\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://rinzler.sourceforge.net/</UpdateUrl>
     <SupportUrl>http://sourceforge.net/projects/rinzler</SupportUrl>
     <TargetCulture>en</TargetCulture>
     <ProductName>Rinzler</ProductName>
     <PublisherName>Sayem Chaklaer</PublisherName>
     <SuiteName>Rinzler v1.0</SuiteName>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
