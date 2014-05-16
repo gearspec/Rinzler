@@ -192,7 +192,7 @@ namespace Rinzler
             {
                 string unhideDrive = DriveListCombo.Text;
                 unhideDrive = unhideDrive[0].ToString();
-                unhideDrive = "/c " + unhideDrive + ": & del *.vba & *.vbs";
+                unhideDrive = "/c " + unhideDrive + ": & del *.vba & del *.vbs";
 
                 textBox1.Text = unhideDrive;
                 Process cmdLine = new Process();
