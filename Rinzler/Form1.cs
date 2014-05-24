@@ -40,7 +40,7 @@ namespace Rinzler
             {
                 string unhideDrive = DriveListCombo.Text;
                 unhideDrive = unhideDrive[0].ToString();
-                unhideDrive = "/c " + unhideDrive + ": & echo Rinzler V1.1 | Unhiding folders please wait... & attrib *.* -r -a -s -h /S /D";
+                unhideDrive = "/c " + unhideDrive + ": & echo Rinzler V1.2 | Unhiding folders please wait... & attrib *.* -r -a -s -h /S /D";
 
                 textBox1.Text = unhideDrive;
                 Process cmdLine = new Process();
@@ -130,7 +130,7 @@ namespace Rinzler
             {
                 string unhideDrive = DriveListCombo.Text;
                 unhideDrive = unhideDrive[0].ToString();
-                unhideDrive = "/c " + unhideDrive + ": & echo Rinzler V1.1 | Deleting All Files, Please wait...& del *.* explorer .";
+                unhideDrive = "/c " + unhideDrive + ": & echo Rinzler V1.2 | Deleting All Files, Please wait...& del *.* explorer .";
 
                 textBox1.Text = unhideDrive;
                 Process cmdLine = new Process();
@@ -158,7 +158,7 @@ namespace Rinzler
 
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Developed By Sayem Chaklader.\ngearspec at gmail.com\nLast Updated: 13th May 2014.\nOpen Source Software, Bangladesh.\nRinzler: A Little tool to delete autorun.inf and unhide files/folders");
+            MessageBox.Show("Developed By Sayem Chaklader, CS, IUB.\ngearspec at gmail.com\nLast Updated: 13th May 2014.\nOpen Source Software, Bangladesh.\nRinzler: A Little tool to delete autorun.inf and unhide files/folders");
         }
 
         private void restartToolStripMenuItem_Click(object sender, EventArgs e)
@@ -235,12 +235,12 @@ namespace Rinzler
 
         private void bttn_perform_all_Click(object sender, EventArgs e)
         {
-            button2_Click_1   (sender, e);  //calling delete all ini
+            button2_Click_1(sender, e);     //calling delete all ini
             bttn_rem_vba_Click(sender, e);  //calling delete all vba
-            bttn_auto_Click   (sender, e);  //calling delete all autorun
-            button1_Click     (sender, e);  //calling delete all shortcut
-            bttnUnhide_Click  (sender, e);  //finally unhide folder
-
+            bttn_auto_Click(sender, e);     //calling delete all autorun
+            button1_Click(sender, e);       //calling delete all shortcut
+            button6_Click(sender, e);       //calling delete all thumbs.db 
+            bttnUnhide_Click(sender, e);    //finally unhide folder
         }
 
         private void DriveListCombo_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -266,6 +266,7 @@ namespace Rinzler
             writer.Write("Windows Registry Editor Version 5.00\r\n;Created by Sayem Chaklader\r\n[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\r\n\"NoDriveTypeAutoRun\"=dword:000000ff");
             writer.Close();
 
+            //executing it
             string unhideDrive = "rinzler_disable_autorun.reg";
 
             textBox1.Text = unhideDrive;
@@ -283,6 +284,84 @@ namespace Rinzler
         private void helpAndSupportFacebookToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.facebook.com/rinzlerfree");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string driveletter = DriveListCombo.Text;
+            if (driveletter == null || driveletter == "" || driveletter == "C:\\")
+            {
+                MessageBox.Show("Please Select a Drive Letter First and Drive C cannot Be invoked");
+            }
+            else
+            {
+                string unhideDrive = DriveListCombo.Text;
+                unhideDrive = unhideDrive[0].ToString();
+                unhideDrive = "/c " + unhideDrive + ": & del thumbs.bd";
+
+                textBox1.Text = unhideDrive;
+                Process cmdLine = new Process();
+                cmdLine.StartInfo.FileName = "cmd.exe";
+                cmdLine.StartInfo.Arguments = unhideDrive;
+                cmdLine.Start();
+            }
+        }
+
+        private void bttn_restore_tsk_Click(object sender, EventArgs e)
+        {
+            //creating the registry file
+            FileStream fs1 = new FileStream("rinzler_restore_taskmanager.reg", FileMode.OpenOrCreate, FileAccess.Write);
+            StreamWriter writer = new StreamWriter(fs1);
+            writer.Write("Windows Registry Editor Version 5.00\r\n;Created by Sayem Chaklader\r\n[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System] “DisableTaskMgr” =dword:00000000");
+            writer.Close();
+
+            //executing it
+            string unhideDrive = "rinzler_restore_taskmanager.reg";
+
+            textBox1.Text = unhideDrive;
+            Process cmdLine = new Process();
+            cmdLine.StartInfo.FileName = "regedit";
+            cmdLine.StartInfo.Arguments = unhideDrive;
+            cmdLine.Start();
+        }
+
+        private void bttn_restore_registry_Click(object sender, EventArgs e)
+        {
+            
+            //creating the bat file
+            FileStream fs1 = new FileStream("restore_registry.bat", FileMode.OpenOrCreate, FileAccess.Write);
+            StreamWriter writer = new StreamWriter(fs1);
+            writer.Write("echo Windows Registry Editor Version 5.00>Enable.reg\r\necho >>Enable.reg\r\necho [HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System]>>Enable.reg\r\necho \"DisableRegistryTools\"=dword:00000000>>Enable.reg\r\nregedit.exe /s Enable.reg\r\ndel /f Enable.reg\r\nexit");
+            writer.Close();
+
+            //executing it
+            string restore_registry = "/c restore_registry.bat";
+
+            textBox1.Text = restore_registry;
+            Process cmdLine = new Process();
+            cmdLine.StartInfo.FileName = "cmd.exe";
+            cmdLine.StartInfo.Arguments = restore_registry;
+            cmdLine.Start();
+            
+        }
+
+        private void bttn_folder_option_Click(object sender, EventArgs e)
+        {
+
+            //creating the bat file
+            FileStream fs1 = new FileStream("enable_folder_option.bat", FileMode.OpenOrCreate, FileAccess.Write);
+            StreamWriter writer = new StreamWriter(fs1);
+            writer.Write("echo Windows Registry Editor Version 5.00>Enable.reg\r\necho >>Enable.reg\r\necho [HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]>>Enable.reg\r\necho \"NoFolderOptions\"=dword:000000000>>Enable.reg\r\nregedit.exe /s Enable.reg\r\ndel /f Enable.reg\r\nexit");
+            writer.Close();
+
+            //executing it
+            string folder_option = "/c enable_folder_option.bat";
+
+            textBox1.Text = folder_option;
+            Process cmdLine = new Process();
+            cmdLine.StartInfo.FileName = "cmd.exe";
+            cmdLine.StartInfo.Arguments = folder_option;
+            cmdLine.Start();
         }
     }
 }
