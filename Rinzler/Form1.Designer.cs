@@ -64,6 +64,7 @@
             this.bttn_restore_tsk = new System.Windows.Forms.Button();
             this.bttn_restore_registry = new System.Windows.Forms.Button();
             this.bttn_folder_option = new System.Windows.Forms.Button();
+            this.bttn_delete_all_exe = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -82,9 +83,9 @@
             this.bttnUnhide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnUnhide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnUnhide.ForeColor = System.Drawing.Color.White;
-            this.bttnUnhide.Location = new System.Drawing.Point(30, 54);
+            this.bttnUnhide.Location = new System.Drawing.Point(19, 54);
             this.bttnUnhide.Name = "bttnUnhide";
-            this.bttnUnhide.Size = new System.Drawing.Size(278, 49);
+            this.bttnUnhide.Size = new System.Drawing.Size(289, 49);
             this.bttnUnhide.TabIndex = 1;
             this.bttnUnhide.Text = "&Unhide All Files and Folder";
             this.bttnUnhide.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -122,9 +123,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(30, 106);
+            this.button1.Location = new System.Drawing.Point(19, 106);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(278, 38);
+            this.button1.Size = new System.Drawing.Size(289, 38);
             this.button1.TabIndex = 2;
             this.button1.Text = "Delete All &Shortcut";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -141,9 +142,9 @@
             this.bttn_auto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttn_auto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttn_auto.ForeColor = System.Drawing.Color.White;
-            this.bttn_auto.Location = new System.Drawing.Point(30, 147);
+            this.bttn_auto.Location = new System.Drawing.Point(19, 147);
             this.bttn_auto.Name = "bttn_auto";
-            this.bttn_auto.Size = new System.Drawing.Size(278, 38);
+            this.bttn_auto.Size = new System.Drawing.Size(289, 38);
             this.bttn_auto.TabIndex = 3;
             this.bttn_auto.Text = "Delete all &Autorun.inf";
             this.bttn_auto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -160,10 +161,10 @@
             this.bttnDelAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnDelAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnDelAll.ForeColor = System.Drawing.Color.White;
-            this.bttnDelAll.Location = new System.Drawing.Point(358, 160);
+            this.bttnDelAll.Location = new System.Drawing.Point(357, 159);
             this.bttnDelAll.Name = "bttnDelAll";
             this.bttnDelAll.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bttnDelAll.Size = new System.Drawing.Size(247, 45);
+            this.bttnDelAll.Size = new System.Drawing.Size(247, 41);
             this.bttnDelAll.TabIndex = 5;
             this.bttnDelAll.Text = "&Delete All Files in Drive";
             this.bttnDelAll.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -272,7 +273,7 @@
             this.bttn_explorer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttn_explorer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttn_explorer.ForeColor = System.Drawing.Color.White;
-            this.bttn_explorer.Location = new System.Drawing.Point(358, 114);
+            this.bttn_explorer.Location = new System.Drawing.Point(357, 114);
             this.bttn_explorer.Name = "bttn_explorer";
             this.bttn_explorer.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bttn_explorer.Size = new System.Drawing.Size(247, 44);
@@ -354,9 +355,9 @@
             this.bttn_rem_vba.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttn_rem_vba.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttn_rem_vba.ForeColor = System.Drawing.Color.White;
-            this.bttn_rem_vba.Location = new System.Drawing.Point(30, 188);
+            this.bttn_rem_vba.Location = new System.Drawing.Point(19, 188);
             this.bttn_rem_vba.Name = "bttn_rem_vba";
-            this.bttn_rem_vba.Size = new System.Drawing.Size(278, 38);
+            this.bttn_rem_vba.Size = new System.Drawing.Size(289, 38);
             this.bttn_rem_vba.TabIndex = 15;
             this.bttn_rem_vba.Text = "Delete  all &VBA,VBS Scripts";
             this.bttn_rem_vba.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -373,9 +374,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(30, 229);
+            this.button2.Location = new System.Drawing.Point(19, 229);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(278, 38);
+            this.button2.Size = new System.Drawing.Size(289, 38);
             this.button2.TabIndex = 16;
             this.button2.Text = "Delete  all &ini files";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -394,7 +395,7 @@
             this.groupBox1.Controls.Add(this.bttn_rem_vba);
             this.groupBox1.Location = new System.Drawing.Point(13, 115);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(319, 317);
+            this.groupBox1.Size = new System.Drawing.Size(308, 317);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "+";
@@ -409,11 +410,11 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(30, 271);
+            this.button6.Location = new System.Drawing.Point(19, 271);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(278, 38);
+            this.button6.Size = new System.Drawing.Size(289, 38);
             this.button6.TabIndex = 18;
-            this.button6.Text = "Delete  all &tumbs.db files";
+            this.button6.Text = "Delete  all &tumbs.db, recycler.exe files";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -428,7 +429,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(358, 387);
+            this.button3.Location = new System.Drawing.Point(357, 419);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(247, 46);
             this.button3.TabIndex = 19;
@@ -465,7 +466,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(358, 207);
+            this.button5.Location = new System.Drawing.Point(357, 243);
             this.button5.Name = "button5";
             this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button5.Size = new System.Drawing.Size(247, 43);
@@ -485,7 +486,7 @@
             this.bttn_restore_tsk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttn_restore_tsk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttn_restore_tsk.ForeColor = System.Drawing.Color.White;
-            this.bttn_restore_tsk.Location = new System.Drawing.Point(358, 252);
+            this.bttn_restore_tsk.Location = new System.Drawing.Point(357, 287);
             this.bttn_restore_tsk.Name = "bttn_restore_tsk";
             this.bttn_restore_tsk.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bttn_restore_tsk.Size = new System.Drawing.Size(247, 43);
@@ -505,7 +506,7 @@
             this.bttn_restore_registry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttn_restore_registry.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttn_restore_registry.ForeColor = System.Drawing.Color.White;
-            this.bttn_restore_registry.Location = new System.Drawing.Point(358, 297);
+            this.bttn_restore_registry.Location = new System.Drawing.Point(357, 331);
             this.bttn_restore_registry.Name = "bttn_restore_registry";
             this.bttn_restore_registry.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bttn_restore_registry.Size = new System.Drawing.Size(247, 43);
@@ -525,7 +526,7 @@
             this.bttn_folder_option.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttn_folder_option.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttn_folder_option.ForeColor = System.Drawing.Color.White;
-            this.bttn_folder_option.Location = new System.Drawing.Point(358, 342);
+            this.bttn_folder_option.Location = new System.Drawing.Point(357, 375);
             this.bttn_folder_option.Name = "bttn_folder_option";
             this.bttn_folder_option.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bttn_folder_option.Size = new System.Drawing.Size(247, 43);
@@ -535,12 +536,33 @@
             this.bttn_folder_option.UseVisualStyleBackColor = false;
             this.bttn_folder_option.Click += new System.EventHandler(this.bttn_folder_option_Click);
             // 
+            // bttn_delete_all_exe
+            // 
+            this.bttn_delete_all_exe.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bttn_delete_all_exe.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.bttn_delete_all_exe.FlatAppearance.BorderSize = 0;
+            this.bttn_delete_all_exe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.bttn_delete_all_exe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
+            this.bttn_delete_all_exe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttn_delete_all_exe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.176471F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttn_delete_all_exe.ForeColor = System.Drawing.Color.White;
+            this.bttn_delete_all_exe.Location = new System.Drawing.Point(357, 201);
+            this.bttn_delete_all_exe.Name = "bttn_delete_all_exe";
+            this.bttn_delete_all_exe.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bttn_delete_all_exe.Size = new System.Drawing.Size(247, 41);
+            this.bttn_delete_all_exe.TabIndex = 25;
+            this.bttn_delete_all_exe.Text = "&Delete All .exe files";
+            this.bttn_delete_all_exe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttn_delete_all_exe.UseVisualStyleBackColor = false;
+            this.bttn_delete_all_exe.Click += new System.EventHandler(this.bttn_delete_all_exe_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(624, 450);
+            this.ClientSize = new System.Drawing.Size(624, 479);
+            this.Controls.Add(this.bttn_delete_all_exe);
             this.Controls.Add(this.bttn_folder_option);
             this.Controls.Add(this.bttn_restore_registry);
             this.Controls.Add(this.bttn_restore_tsk);
@@ -614,6 +636,7 @@
         private System.Windows.Forms.Button bttn_restore_tsk;
         private System.Windows.Forms.Button bttn_restore_registry;
         private System.Windows.Forms.Button bttn_folder_option;
+        private System.Windows.Forms.Button bttn_delete_all_exe;
     }
 }
 

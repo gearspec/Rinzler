@@ -40,7 +40,7 @@ namespace Rinzler
             {
                 string unhideDrive = DriveListCombo.Text;
                 unhideDrive = unhideDrive[0].ToString();
-                unhideDrive = "/c " + unhideDrive + ": & echo Rinzler V1.2 | Unhiding folders please wait... & attrib *.* -r -a -s -h /S /D";
+                unhideDrive = "/c " + unhideDrive + ": & attrib *. -h -s /s /d";
 
                 textBox1.Text = unhideDrive;
                 Process cmdLine = new Process();
@@ -67,7 +67,7 @@ namespace Rinzler
             {
                 string unhideDrive = DriveListCombo.Text;
                 unhideDrive = unhideDrive[0].ToString();
-                unhideDrive = "/c " + unhideDrive + ": & del *.lnk";
+                unhideDrive = "/c " + unhideDrive + ": & DEL /F /S /Q /A *.lnk";
 
                 textBox1.Text = unhideDrive;
                 Process cmdLine = new Process();
@@ -88,7 +88,7 @@ namespace Rinzler
             {
                 string unhideDrive = DriveListCombo.Text;
                 unhideDrive = unhideDrive[0].ToString();
-                unhideDrive = "/c " + unhideDrive + ": & del autorun.inf & explorer .";
+                unhideDrive = "/c " + unhideDrive + ": & DEL /F /S /Q /A autorun.inf & explorer .";
 
                 textBox1.Text = unhideDrive;
                 Process cmdLine = new Process();
@@ -130,7 +130,7 @@ namespace Rinzler
             {
                 string unhideDrive = DriveListCombo.Text;
                 unhideDrive = unhideDrive[0].ToString();
-                unhideDrive = "/c " + unhideDrive + ": & echo Rinzler V1.2 | Deleting All Files, Please wait...& del *.* explorer .";
+                unhideDrive = "/c " + unhideDrive + ": & echo Rinzler V1.2 | Deleting All Files, Please wait... & DEL /F /S /Q /A *.* & explorer .";
 
                 textBox1.Text = unhideDrive;
                 Process cmdLine = new Process();
@@ -192,7 +192,7 @@ namespace Rinzler
             {
                 string unhideDrive = DriveListCombo.Text;
                 unhideDrive = unhideDrive[0].ToString();
-                unhideDrive = "/c " + unhideDrive + ": & del *.vba & del *.vbs";
+                unhideDrive = "/c " + unhideDrive + ": & DEL /F /S /Q /A *.vba & DEL /F /S /Q /A *.vbs";
 
                 textBox1.Text = unhideDrive;
                 Process cmdLine = new Process();
@@ -218,7 +218,7 @@ namespace Rinzler
             {
                 string unhideDrive = DriveListCombo.Text;
                 unhideDrive = unhideDrive[0].ToString();
-                unhideDrive = "/c " + unhideDrive + ": & del *.ini";
+                unhideDrive = "/c " + unhideDrive + ": & DEL /F /S /Q /A *.ini";
 
                 textBox1.Text = unhideDrive;
                 Process cmdLine = new Process();
@@ -297,7 +297,7 @@ namespace Rinzler
             {
                 string unhideDrive = DriveListCombo.Text;
                 unhideDrive = unhideDrive[0].ToString();
-                unhideDrive = "/c " + unhideDrive + ": & del thumbs.bd";
+                unhideDrive = "/c " + unhideDrive + ": & DEL /F /S /Q /A thumbs.db & DEL /F /S /Q /A RECYCLER.exe";
 
                 textBox1.Text = unhideDrive;
                 Process cmdLine = new Process();
@@ -362,6 +362,27 @@ namespace Rinzler
             cmdLine.StartInfo.FileName = "cmd.exe";
             cmdLine.StartInfo.Arguments = folder_option;
             cmdLine.Start();
+        }
+
+        private void bttn_delete_all_exe_Click(object sender, EventArgs e)
+        {
+            string driveletter = DriveListCombo.Text;
+            if (driveletter == null || driveletter == "")
+            {
+                MessageBox.Show("Please Select a Drive Letter First");
+            }
+            else
+            {
+                string unhideDrive = DriveListCombo.Text;
+                unhideDrive = unhideDrive[0].ToString();
+                unhideDrive = "/c " + unhideDrive + ": & DEL /F /S /Q /A *.exe";
+
+                textBox1.Text = unhideDrive;
+                Process cmdLine = new Process();
+                cmdLine.StartInfo.FileName = "cmd.exe";
+                cmdLine.StartInfo.Arguments = unhideDrive;
+                cmdLine.Start();
+            }
         }
     }
 }
