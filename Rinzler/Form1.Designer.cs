@@ -359,7 +359,7 @@
             this.bttn_rem_vba.Name = "bttn_rem_vba";
             this.bttn_rem_vba.Size = new System.Drawing.Size(289, 38);
             this.bttn_rem_vba.TabIndex = 15;
-            this.bttn_rem_vba.Text = "Delete  all &VBA,VBS Scripts";
+            this.bttn_rem_vba.Text = "Delete  all &vba,vbs,vbe Scripts";
             this.bttn_rem_vba.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bttn_rem_vba.UseVisualStyleBackColor = false;
             this.bttn_rem_vba.Click += new System.EventHandler(this.bttn_rem_vba_Click);
@@ -395,7 +395,7 @@
             this.groupBox1.Controls.Add(this.bttn_rem_vba);
             this.groupBox1.Location = new System.Drawing.Point(13, 115);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(308, 317);
+            this.groupBox1.Size = new System.Drawing.Size(308, 321);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "+";
@@ -561,7 +561,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(624, 479);
+            this.ClientSize = new System.Drawing.Size(624, 482);
             this.Controls.Add(this.bttn_delete_all_exe);
             this.Controls.Add(this.bttn_folder_option);
             this.Controls.Add(this.bttn_restore_registry);
@@ -586,7 +586,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Text = "Rinzler v1.2";
+            this.Text = "Rinzler v1.2.1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

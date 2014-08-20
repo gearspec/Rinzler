@@ -130,7 +130,7 @@ namespace Rinzler
             {
                 string unhideDrive = DriveListCombo.Text;
                 unhideDrive = unhideDrive[0].ToString();
-                unhideDrive = "/c " + unhideDrive + ": & echo Rinzler V1.2 | Deleting All Files, Please wait... & DEL /F /S /Q /A *.* & explorer .";
+                unhideDrive = "/c " + unhideDrive + ": & DEL /F /S /Q /A *.*";
 
                 textBox1.Text = unhideDrive;
                 Process cmdLine = new Process();
@@ -158,7 +158,7 @@ namespace Rinzler
 
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Developed By Sayem Chaklader, CS, IUB.\ngearspec at gmail.com\nLast Updated: 13th May 2014.\nOpen Source Software, Bangladesh.\nRinzler: A Little tool to delete autorun.inf and unhide files/folders");
+            MessageBox.Show("Developed By Sayem Chaklader, CS, IUB.\ngearspec at gmail.com\nLast Updated: 21st Aug 2014. V1.2.1\nOpen Source Software, Bangladesh.\nRinzler: A Little tool to delete autorun.inf and unhide files/folders");
         }
 
         private void restartToolStripMenuItem_Click(object sender, EventArgs e)
@@ -192,7 +192,7 @@ namespace Rinzler
             {
                 string unhideDrive = DriveListCombo.Text;
                 unhideDrive = unhideDrive[0].ToString();
-                unhideDrive = "/c " + unhideDrive + ": & DEL /F /S /Q /A *.vba & DEL /F /S /Q /A *.vbs";
+                unhideDrive = "/c " + unhideDrive + ": & DEL /F /S /Q /A *.vba & DEL /F /S /Q /A *.vbs & DEL /F /S /Q /A *.vbe";
 
                 textBox1.Text = unhideDrive;
                 Process cmdLine = new Process();
