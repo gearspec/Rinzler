@@ -29,7 +29,7 @@
     <ProductName>Rinzler</ProductName>
     <PublisherName>Sayem Chaklaer</PublisherName>
     <SuiteName>Rinzler v1.0</SuiteName>
-    <ApplicationRevision>13</ApplicationRevision>
+    <ApplicationRevision>14</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

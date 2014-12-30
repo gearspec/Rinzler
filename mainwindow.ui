@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>946</width>
+    <height>635</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Rinzler USB Cleaner 2.0</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../rinzler/rinzler.ico</normaloff>../../rinzler/rinzler.ico</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">border-color: rgb(85, 170, 255);
+background-color: rgb(39, 39, 39);
+border-color: rgb(85, 170, 127);</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextOnly</enum>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="bttnCleanAll">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>80</y>
+      <width>311</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Click this if you want to clean your USB drive</string>
+    </property>
+    <property name="toolTipDuration">
+     <number>2</number>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 10pt &quot;Consolas&quot;;
+color: rgb(255, 255, 255);
+background-color: qradialgradient(spread:pad, cx:0.977, cy:0.119, radius:0.799, fx:0.983, fy:0.113, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(8, 29, 34, 255));
+border-color: rgb(85, 170, 127);
+border-style: solid;
+border-width: 3px;</string>
+    </property>
+    <property name="text">
+     <string>One Click &amp;Clean Selected Drive</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>611</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(85, 170, 255);
+font: 9pt &quot;Consolas&quot;;
+color:rgb(85, 255, 255);
+background-color: qradialgradient(spread:pad, cx:0.977, cy:0.119, radius:0.799, fx:0.983, fy:0.113, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(8, 29, 34, 255));
+border-width: 2px;</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttnExit">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>570</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(230, 153, 114);
+</string>
+    </property>
+    <property name="text">
+     <string>E&amp;xit</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblOutput">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>191</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(94, 167, 255);</string>
+    </property>
+    <property name="text">
+     <string>Command Window Output</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboDriveList">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>20</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 255, 255);</string>
+    </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbldrive">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>0</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(94, 167, 255);</string>
+    </property>
+    <property name="text">
+     <string>Select Your USB Drive</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttnRefreshDrive">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>20</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(96, 143, 71);
+
+</string>
+    </property>
+    <property name="text">
+     <string>Reload Drives</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttnClearOutput">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>570</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(85, 170, 255);
+</string>
+    </property>
+    <property name="text">
+     <string>Clear Output</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>60</y>
+      <width>331</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttn_unhide_all">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>140</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(71, 214, 214);</string>
+    </property>
+    <property name="text">
+     <string>Un&amp;hide All Files and Folders</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>120</y>
+      <width>311</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttn_del_shortcut">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>170</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(68, 137, 206);
+</string>
+    </property>
+    <property name="text">
+     <string>Delete All &amp;Shortcuts</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttn_del_autorun">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>200</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(68, 137, 206);</string>
+    </property>
+    <property name="text">
+     <string>Delete &amp;Autorun.inf</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttn_disable_reg">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>400</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(96, 143, 71);
+
+</string>
+    </property>
+    <property name="text">
+     <string>Disable Autorun Completely (No more infected USB)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttn_Open_Drive">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>20</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(96, 143, 71);
+
+</string>
+    </property>
+    <property name="text">
+     <string>Explore</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttn_del_all_vb">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>230</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(68, 137, 206);
+</string>
+    </property>
+    <property name="text">
+     <string>Delete All &amp;Visual Basic Scripts</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttn_del_all_ini">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>260</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(68, 137, 206);</string>
+    </property>
+    <property name="text">
+     <string>Delete All .&amp;ini files</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>320</y>
+      <width>311</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttn_del_recycler">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>290</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(68, 137, 206);</string>
+    </property>
+    <property name="text">
+     <string>Delete &amp;Recycler &amp;&amp; thumbs.db</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttn_rem_exe">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>370</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(96, 143, 71);
+</string>
+    </property>
+    <property name="text">
+     <string>Remove All .exe files</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttn_enable_folder_option">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>430</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(96, 143, 71);
+
+</string>
+    </property>
+    <property name="text">
+     <string>Restore Folder Options</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_4">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>520</y>
+      <width>311</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttn_del_all_files">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>340</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Delete All Files in the selected Drive</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(96, 143, 71);
+</string>
+    </property>
+    <property name="text">
+     <string>Delete All Files</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttn_enable_regedit">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>460</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(96, 143, 71);
+</string>
+    </property>
+    <property name="text">
+     <string>Restore Registry Editor (re&amp;gedit)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttn_enable_taskmanager">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>490</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(96, 143, 71);
+</string>
+    </property>
+    <property name="text">
+     <string>&amp;Restore Task Manager (ctrl+alt+del)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_rinzler_site">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>580</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;http://rinzler.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#55aaff;&quot;&gt;rinzler.sourceforge.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_gnu">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>580</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;http://www.gnu.org/copyleft/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#55aaff;&quot;&gt;GNU GPL 3.0&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bttn_about">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>540</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(85, 170, 255);
+</string>
+    </property>
+    <property name="text">
+     <string>About</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_fb">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>580</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://www.facebook.com/rinzlerfree&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#00aaff;&quot;&gt;facebook.com/rinzlerfree&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_beer">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>580</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=446TEJYU6URKS&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#55aaff;&quot;&gt;Beer Me&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_5">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>570</y>
+      <width>3</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_6">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>3</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_7">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>570</y>
+      <width>3</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_8">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>570</y>
+      <width>3</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <zorder>bttnCleanAll</zorder>
+   <zorder>lblOutput</zorder>
+   <zorder>comboDriveList</zorder>
+   <zorder>lbldrive</zorder>
+   <zorder>bttnRefreshDrive</zorder>
+   <zorder>bttnClearOutput</zorder>
+   <zorder>line</zorder>
+   <zorder>bttn_unhide_all</zorder>
+   <zorder>line_2</zorder>
+   <zorder>bttn_del_shortcut</zorder>
+   <zorder>bttn_del_autorun</zorder>
+   <zorder>bttn_Open_Drive</zorder>
+   <zorder>bttn_del_all_vb</zorder>
+   <zorder>bttn_del_all_ini</zorder>
+   <zorder>line_3</zorder>
+   <zorder>bttn_del_recycler</zorder>
+   <zorder>line_4</zorder>
+   <zorder>bttn_del_all_files</zorder>
+   <zorder>bttn_rem_exe</zorder>
+   <zorder>bttn_disable_reg</zorder>
+   <zorder>bttn_enable_folder_option</zorder>
+   <zorder>bttn_enable_regedit</zorder>
+   <zorder>bttn_enable_taskmanager</zorder>
+   <zorder>lbl_rinzler_site</zorder>
+   <zorder>textEdit</zorder>
+   <zorder>lbl_gnu</zorder>
+   <zorder>lbl_fb</zorder>
+   <zorder>lbl_beer</zorder>
+   <zorder>line_5</zorder>
+   <zorder>line_6</zorder>
+   <zorder>line_7</zorder>
+   <zorder>line_8</zorder>
+   <zorder>bttn_about</zorder>
+   <zorder>bttnExit</zorder>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionE_xit">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>bttnClearOutput</tabstop>
+  <tabstop>comboDriveList</tabstop>
+  <tabstop>bttnCleanAll</tabstop>
+  <tabstop>bttn_unhide_all</tabstop>
+  <tabstop>bttn_del_shortcut</tabstop>
+  <tabstop>bttn_del_autorun</tabstop>
+  <tabstop>bttn_del_all_vb</tabstop>
+  <tabstop>bttn_del_all_ini</tabstop>
+  <tabstop>bttn_del_recycler</tabstop>
+  <tabstop>bttn_del_all_files</tabstop>
+  <tabstop>bttn_rem_exe</tabstop>
+  <tabstop>bttn_disable_reg</tabstop>
+  <tabstop>bttn_enable_folder_option</tabstop>
+  <tabstop>bttn_enable_regedit</tabstop>
+  <tabstop>bttn_enable_taskmanager</tabstop>
+  <tabstop>bttnExit</tabstop>
+  <tabstop>bttnRefreshDrive</tabstop>
+  <tabstop>bttn_Open_Drive</tabstop>
+  <tabstop>textEdit</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
