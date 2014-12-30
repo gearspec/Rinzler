@@ -1,4 +1,4 @@
-Rinzler V1.2.1 (21st Aug 2014)
+Rinzler USB Cleaner V2.0 (30th Dec 2014)
 ------------------------------------
 This is a small tool that removes autorun.inf 
 and other malicious scripts, unhides folder 
@@ -19,7 +19,13 @@ Author: Sayem Chaklader
 gearspec at gmail.com
 ----------------------
 
-Version is v1.2.1 (Latest) 
+Version is v2.0 (Latest) 
+
+Added Features:
+1. Added output window.
+2. Completely independent and .net framework free
+3. C++ native code.
+4. Automatic Last Drive (usually USB) selection.
 
 Added Features:
 1. Ability to remove vbe scripts.
